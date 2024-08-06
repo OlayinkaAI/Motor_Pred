@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Speed Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Adjusted max-width for smaller screens */
+        }
+        .form-group {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px; /* Adjusted font size */
+        }
+        .form-group input {
+            width: 100%;
+            padding: 5px; /* Reduced padding */
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 8px 10px; /* Reduced padding */
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px; /* Adjusted font size */
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 18px;">Motor Speed Prediction</h1> <!-- Adjusted font size -->
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="u_q">Uq:</label>
+                <input type="number" id="u_q" name="u_q" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="coolant">Coolant:</label>
+                <input type="number" id="coolant" name="coolant" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="stator_winding">Stator Winding:</label>
+                <input type="number" id="stator_winding" name="stator_winding" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="u_d">Ud:</label>
+                <input type="number" id="u_d" name="u_d" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="stator_tooth">Stator Tooth:</label>
+                <input type="number" id="stator_tooth" name="stator_tooth" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="i_d">Id:</label>
+                <input type="number" id="i_d" name="i_d" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="i_q">Iq:</label>
+                <input type="number" id="i_q" name="i_q" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="pm">PM:</label>
+                <input type="number" id="pm" name="pm" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="stator_yoke">Stator Yoke:</label>
+                <input type="number" id="stator_yoke" name="stator_yoke" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="ambient">Ambient:</label>
+                <input type="number" id="ambient" name="ambient" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="torque">Torque:</label>
+                <input type="number" id="torque" name="torque" step="any" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Predict Motor Speed</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
