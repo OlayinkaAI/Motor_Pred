@@ -58,6 +58,7 @@ instance/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+Motor_Prediction.ipynb
 
 # IPython
 profile_default/
